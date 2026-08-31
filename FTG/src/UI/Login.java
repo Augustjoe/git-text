@@ -14,9 +14,9 @@ public class Login {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("┌────────────────────────┐");
+            System.out.println("┌────────────────────────────────┐");
             System.out.println("     🎮 欢迎来到文字格斗游戏 🎮     ");
-            System.out.println("└────────────────────────┘");
+            System.out.println("└────────────────────────────────┘");
             System.out.println("请选择操作：1登录 2注册 3退出");
             int choice = scanner.nextInt();
 
@@ -69,6 +69,8 @@ public class Login {
             }
             if(user.getPassword().equals(password)){
                 System.out.println("登录成功！");
+                FightingGame f = new FightingGame();
+                f.start(username);
                 break;
             }else {
                 if(i == 2){
