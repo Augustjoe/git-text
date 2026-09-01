@@ -15,12 +15,13 @@ public class EnemyCharacter extends Character {
 
     @Override
     public void takeDamage(int damage) {
+
         if (this.defending) {
             this.HP = this.HP - ((damage / 2) <= 0 ? 1 : (damage / 2));
             this.defending = false;
         } else {
             this.HP = this.HP - damage;
         }
-        super.takeDamage(damage);
+        super.takeDamage(0);
     }
 }
