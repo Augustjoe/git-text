@@ -75,6 +75,8 @@ public class FightingGame {
                 round ++;
 
             }
+
+
             if(player.isAlive()){
                 int healHp = r.nextInt(20) + 20;
                 player.heal(healHp);
@@ -94,7 +96,6 @@ public class FightingGame {
                 String choice = sc.next();
                 if (choice.equalsIgnoreCase("n")){
                     System.out.println("游戏结束，感谢游玩！");
-
                     break;
                 }else if (choice.equalsIgnoreCase("y")){
                     count ++;
@@ -105,6 +106,10 @@ public class FightingGame {
             }
 
         }
+
+        System.out.println("总胜场为"+winCount+"场!");
+        System.out.println("游戏结束，感谢游玩！");
+
 
 
 
