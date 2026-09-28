@@ -10,4 +10,6 @@ public interface DeptService {
     * 查询所有的部门数据
     * */
     List<Dept> findAll();
+
+    void delete(Integer id);
 }

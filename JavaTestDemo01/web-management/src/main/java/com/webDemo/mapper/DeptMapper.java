@@ -1,9 +1,10 @@
 package com.webDemo.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import com.webDemo.pojo.Dept;
+import org.springframework.web.bind.annotation.DeleteMapping;
+
 import java.util.List;
 
 @Mapper
@@ -11,6 +12,18 @@ public interface DeptMapper {
     /*
     * 查询所有的部门数据
     * */
+//    @Results(
+//            {
+//                    @Result(column = "create_time", property = "createTime"),
+//                    @Result(column = "update_time", property = "updateTime")
+//            }
+//    )
     @Select("select id, name, create_time, update_time from dept order by update_time desc;")
     List<Dept> findAll();
+
+    /*
+    * 根据ID来删除部门
+    * */
+    @Delete("delete from dept where id = #{id}")
+    void deleteById(Integer id);
 }
