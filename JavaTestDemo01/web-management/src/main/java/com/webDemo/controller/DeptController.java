@@ -9,13 +9,14 @@ import com.webDemo.pojo.Result;
 import com.webDemo.service.DeptService;
 import java.util.List;
 
+@RequestMapping("/depts")
 @RestController
 public class DeptController {
 
     @Autowired
     private DeptService deptService;
 
-    @GetMapping("/depts")
+    @GetMapping
     public Result list() {
        System.out.println("查询全部数据");
         List<Dept> list = deptService.findAll();
@@ -25,7 +26,7 @@ public class DeptController {
     /*
         删除部门的方法
      */
-    @DeleteMapping("/depts")
+    @DeleteMapping
     /*
     * RequestParam 是可以省略的，但要求前端传递的参数名和后端一致
     * */
@@ -52,4 +53,26 @@ public class DeptController {
         System.out.println("删除部门：" + id);
         return Result.success();
     }*/
+
+    @PostMapping
+    public Result add(@RequestBody Dept dept) {
+        System.out.println("添加部门：" + dept);
+        deptService.add(dept);
+        return Result.success();
+    }
+
+    @GetMapping("/{id}")
+    public Result get(@PathVariable Integer id) {
+        System.out.println("查询部门：" + id);
+        Dept dept = deptService.get(id);
+        return Result.success(dept);
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Dept dept) {
+        System.out.println("修改部门：" + dept);
+        deptService.update(dept);
+        return Result.success();
+    }
+
 }

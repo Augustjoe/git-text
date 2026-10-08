@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.webDemo.mapper.DeptMapper;
 import com.webDemo.pojo.Dept;
 import com.webDemo.service.DeptService;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -22,5 +24,21 @@ public class DeptServiceImpl implements DeptService {
     public void delete (Integer id) {
         deptMapper.deleteById(id);
     }
+
+    public  void add (Dept dept) {
+        dept.setCreateTime(LocalDateTime.now());
+        dept.setUpdateTime(LocalDateTime.now());
+        deptMapper.insert(dept);
+    }
+
+    public Dept get (Integer id) {
+        return deptMapper.get(id);
+    }
+
+    public void update(Dept dept){
+        dept.setUpdateTime(LocalDateTime.now());
+        deptMapper.update(dept);
+    }
+
 
 }
