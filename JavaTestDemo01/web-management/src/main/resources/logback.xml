@@ -11,7 +11,7 @@
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <!-- 日志文件输出的文件名，%i表示序号 -->
-            <fileNamePattern>D:/tlias-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <fileNamePattern>E:/log/tlias-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
 
             <!-- 最多保留的历史日志文件数量 -->
             <maxHistory>30</maxHistory>
@@ -27,7 +27,7 @@
     </appender>
 
     <!-- 日志输出级别 -->
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>

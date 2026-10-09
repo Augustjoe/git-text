@@ -1,6 +1,9 @@
 package com.webDemo.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,17 +11,22 @@ import com.webDemo.pojo.Dept;
 import com.webDemo.pojo.Result;
 import com.webDemo.service.DeptService;
 import java.util.List;
+import org.slf4j.Logger;
 
+@Slf4j
 @RequestMapping("/depts")
 @RestController
 public class DeptController {
+
+//    private static final Logger log =  LoggerFactory.getLogger(DeptController.class);
 
     @Autowired
     private DeptService deptService;
 
     @GetMapping
     public Result list() {
-       System.out.println("查询全部数据");
+//       System.out.println("查询全部数据");
+        log.info("查询全部数据");
         List<Dept> list = deptService.findAll();
         return Result.success(list);
 
@@ -31,7 +39,8 @@ public class DeptController {
     * RequestParam 是可以省略的，但要求前端传递的参数名和后端一致
     * */
     public Result delete(Integer id) {
-        System.out.println("删除部门：" + id);
+//        System.out.println("删除部门：" + id);
+        log.info("删除部门：{}", id);
         deptService.delete(id);
         return Result.success();
     }
