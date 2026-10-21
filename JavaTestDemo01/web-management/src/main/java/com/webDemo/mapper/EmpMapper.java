@@ -13,6 +13,9 @@ public interface EmpMapper {
     @Select("select count(*) from emp e,dept d where d.id = e.dept_id;")
     public Long count();
 
-    @Select("select e.*,d.name dept_name from dept d,emp e where d.id = e.dept_id order by e.update_time desc limit #{start},#{pageSize} ;")
-    public List<Emp> selectAll(Integer start,Integer pageSize);
+//    @Select("select e.*,d.name dept_name from dept d,emp e where d.id = e.dept_id order by e.update_time desc limit #{start},#{pageSize} ;")
+//    public List<Emp> selectAll(Integer start,Integer pageSize);
+
+    @Select("select e.*,d.name dept_name from dept d,emp e where d.id = e.dept_id order by e.update_time desc")
+    public List<Emp> selectAll();
 }
