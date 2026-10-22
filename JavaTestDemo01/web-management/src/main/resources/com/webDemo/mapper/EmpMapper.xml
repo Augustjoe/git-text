@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.webDemo.mapper.EmpMapper">
+
+    <select id="selectAllByOther" resultType="com.webDemo.pojo.Emp">
+        SELECT count(0)
+        FROM dept d, emp e
+        WHERE d.id = e.dept_id
+        AND e.name LIKE CONCAT('%', #{name}, '%')
+        AND e.gender = #{gender}
+        AND e.entry_date BETWEEN #{begin} AND #{end}
+        order by e.update_time desc
+    </select>
+</mapper>

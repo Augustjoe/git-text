@@ -7,8 +7,10 @@ import com.webDemo.pojo.Emp;
 import com.webDemo.pojo.PageResult;
 import com.webDemo.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -26,9 +28,10 @@ public class EmpServiceImpl implements EmpService {
 //    }
 
     @Override
-    public PageResult<Emp> page (Integer page,Integer size){
+    public PageResult<Emp> page (Integer page,Integer size,String name, Integer gender,
+                                  LocalDate begin, LocalDate end){
         PageHelper.startPage(page, size);
-        List<Emp> emps = empMapper.selectAll();
+        List<Emp> emps = empMapper.selectAllByOther(name, gender, begin, end);
 
         Page<Emp> p = (Page<Emp>) emps;
 
