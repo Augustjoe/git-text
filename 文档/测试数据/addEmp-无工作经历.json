@@ -1,0 +1,13 @@
+{
+  "username": "java_test_1026_02",
+  "password": "Test123456",
+  "name": "测试员工乙",
+  "gender": 1,
+  "phone": "13900001027",
+  "job": 2,
+  "salary": 7000,
+  "image": "",
+  "entryDate": "2026-10-26",
+  "deptId": 1,
+  "empExprList": []
+}

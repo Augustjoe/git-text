@@ -1,8 +1,9 @@
 package com.webDemo.mapper;
 
 import com.webDemo.pojo.Emp;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import com.webDemo.pojo.EmpExpr;
+import com.webDemo.pojo.EmpQueryParam;
+import org.apache.ibatis.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
@@ -21,6 +22,13 @@ public interface EmpMapper {
     public List<Emp> selectAll();
 
 
-    public List<Emp> selectAllByOther(String name, Integer gender, LocalDate begin, LocalDate end);
+    public List<Emp> selectAllByOther(EmpQueryParam empQueryParam);
+
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    @Insert("insert emp (username, password, name, gender, phone, job, salary, image, entry_date, create_time, update_time, dept_id)\n" +
+            "       values (#{username}, #{password}, #{name}, #{gender}, #{phone}, #{job}, #{salary}, #{image}, #{entryDate}, #{createTime}, #{updateTime}, #{deptId});")
+    void addEmp(Emp emp);
+
+
 
 }

@@ -3,6 +3,7 @@ package com.webDemo.pojo;
 import lombok.Data;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class Emp {
@@ -22,4 +23,6 @@ public class Emp {
     private LocalDateTime updateTime; // 修改时间
 
     private String deptName;
+
+    private List<EmpExpr> empExprList;
 }

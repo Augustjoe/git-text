@@ -1,0 +1,26 @@
+{
+  "username": "java_test_1026_01",
+  "password": "Test123456",
+  "name": "测试员工甲",
+  "gender": 1,
+  "phone": "13900001026",
+  "job": 2,
+  "salary": 9000,
+  "image": "",
+  "entryDate": "2026-10-26",
+  "deptId": 1,
+  "empExprList": [
+    {
+      "begin": "2022-07-01",
+      "end": "2024-06-30",
+      "company": "示例科技甲公司",
+      "job": "Java开发工程师"
+    },
+    {
+      "begin": "2024-07-01",
+      "end": "2026-09-30",
+      "company": "示例科技乙公司",
+      "job": "Java开发工程师"
+    }
+  ]
+}

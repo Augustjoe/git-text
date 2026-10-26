@@ -5,12 +5,23 @@
 <mapper namespace="com.webDemo.mapper.EmpMapper">
 
     <select id="selectAllByOther" resultType="com.webDemo.pojo.Emp">
-        SELECT count(0)
-        FROM dept d, emp e
-        WHERE d.id = e.dept_id
-        AND e.name LIKE CONCAT('%', #{name}, '%')
-        AND e.gender = #{gender}
-        AND e.entry_date BETWEEN #{begin} AND #{end}
-        order by e.update_time desc
+        SELECT e.*, d.name AS dept_name
+        FROM emp e
+        INNER JOIN dept d ON d.id = e.dept_id
+        <where>
+            <if test="name != null and name != ''">
+                AND e.name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="gender != null">
+                AND e.gender = #{gender}
+            </if>
+            <if test="begin != null">
+                AND e.entry_date &gt;= #{begin}
+            </if>
+            <if test="end != null">
+                AND e.entry_date &lt;= #{end}
+            </if>
+        </where>
+        ORDER BY e.update_time DESC
     </select>
 </mapper>
