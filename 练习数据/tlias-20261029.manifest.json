@@ -1,0 +1,33 @@
+{
+  "schema": "tlias",
+  "exportedOn": "2026-10-29",
+  "sourceMySqlVersion": "26.7.0",
+  "sqlFile": "tlias-20261029.sql",
+  "encoding": "UTF-8",
+  "sizeBytes": 13296,
+  "sha256": "54a9b833e845358bda8eb7bc434f6c2313c30da638139fea838fa76b9be8703f",
+  "verification": "Restored into a separate temporary schema; row counts and extended table checksums matched; source schema unchanged.",
+  "tables": [
+    {
+      "table": "dept",
+      "rows": 6,
+      "sourceChecksum": 1218698069,
+      "restoredChecksum": 1218698069,
+      "matched": true
+    },
+    {
+      "table": "emp",
+      "rows": 26,
+      "sourceChecksum": 4257877729,
+      "restoredChecksum": 4257877729,
+      "matched": true
+    },
+    {
+      "table": "emp_expr",
+      "rows": 2,
+      "sourceChecksum": 1174269161,
+      "restoredChecksum": 1174269161,
+      "matched": true
+    }
+  ]
+}

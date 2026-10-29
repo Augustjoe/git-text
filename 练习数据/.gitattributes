@@ -1,0 +1,2 @@
+# Preserve exported SQL bytes so its SHA-256 remains the same on every computer.
+*.sql -text
