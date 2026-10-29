@@ -1,0 +1,62 @@
+{
+  "verifiedOn": "2026-10-29",
+  "host": "127.0.0.1",
+  "port": 3306,
+  "mysqlVersion": "8.4.9",
+  "schema": "tlias",
+  "sqlFile": "练习数据/tlias-20261029.sql",
+  "sqlSha256": "54a9b833e845358bda8eb7bc434f6c2313c30da638139fea838fa76b9be8703f",
+  "tliasPreviouslyExisted": false,
+  "existingSchemasUnchanged": true,
+  "existingTableSignaturesBefore": {
+    "ftg.tb_dept": {
+      "rows": 5,
+      "checksum": 3485672361
+    },
+    "ftg.tb_emp": {
+      "rows": 17,
+      "checksum": 580597553
+    }
+  },
+  "existingTableSignaturesAfter": {
+    "ftg.tb_dept": {
+      "rows": 5,
+      "checksum": 3485672361
+    },
+    "ftg.tb_emp": {
+      "rows": 17,
+      "checksum": 580597553
+    }
+  },
+  "tables": [
+    {
+      "table": "dept",
+      "rows": 6,
+      "expectedRows": 6,
+      "checksum": 1218698069,
+      "expectedChecksum": 1218698069,
+      "rowCountMatched": true,
+      "checksumMatched": true
+    },
+    {
+      "table": "emp",
+      "rows": 26,
+      "expectedRows": 26,
+      "checksum": 4257877729,
+      "expectedChecksum": 4257877729,
+      "rowCountMatched": true,
+      "checksumMatched": true
+    },
+    {
+      "table": "emp_expr",
+      "rows": 2,
+      "expectedRows": 2,
+      "checksum": 1174269161,
+      "expectedChecksum": 1174269161,
+      "rowCountMatched": true,
+      "checksumMatched": true
+    }
+  ],
+  "applicationConnectionConfigurationChanged": false,
+  "applicationStartupTested": false
+}

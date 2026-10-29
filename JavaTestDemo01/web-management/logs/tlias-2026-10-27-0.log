@@ -1,0 +1,12 @@
+2026-10-27 21:33:02.609 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 21.0.12.1 with PID 22228 (D:\工作\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by WCS19 in D:\工作\gitTest\git-text\JavaTestDemo01\web-management)
+2026-10-27 21:33:02.612 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-10-27 21:33:03.849 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-10-27 21:33:03.863 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-27 21:33:03.865 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-10-27 21:33:03.875 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-27 21:33:03.930 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 1264 ms
+2026-10-27 21:33:04.583 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+2026-10-27 21:33:04.715 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 8080 (http) with context path '/'
+2026-10-27 21:33:04.720 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 2.556 seconds (process running for 3.188)
+2026-10-27 22:21:18.165 [SpringApplicationShutdownHook] INFO  org.springframework.boot.tomcat.GracefulShutdown-Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-27 22:21:18.170 [tomcat-shutdown] INFO  org.springframework.boot.tomcat.GracefulShutdown-Graceful shutdown complete

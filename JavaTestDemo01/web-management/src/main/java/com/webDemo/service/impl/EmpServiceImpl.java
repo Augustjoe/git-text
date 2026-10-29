@@ -3,15 +3,14 @@ package com.webDemo.service.impl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.webDemo.mapper.EmpExprMapper;
+import com.webDemo.mapper.EmpLogMapper;
 import com.webDemo.mapper.EmpMapper;
-import com.webDemo.pojo.Emp;
-import com.webDemo.pojo.EmpExpr;
-import com.webDemo.pojo.EmpQueryParam;
-import com.webDemo.pojo.PageResult;
+import com.webDemo.pojo.*;
 import com.webDemo.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -23,6 +22,9 @@ public class EmpServiceImpl implements EmpService {
     private EmpMapper empMapper;
     @Autowired
     private EmpExprMapper empExprMapper;
+    @Autowired
+    private EmpLogMapper empLogMapper;
+
 
 //
 //    public PageResult<Emp> page (Integer page,Integer size){
@@ -45,18 +47,27 @@ public class EmpServiceImpl implements EmpService {
 
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void addEmp(Emp emp) {
-        emp.setCreateTime(LocalDateTime.now());
-        emp.setUpdateTime(LocalDateTime.now());
-        empMapper.addEmp(emp);
+        try {
+            emp.setCreateTime(LocalDateTime.now());
+            emp.setUpdateTime(LocalDateTime.now());
+            empMapper.addEmp(emp);
 
-        List<EmpExpr> empExprList = emp.getEmpExprList();
-        if(!empExprList.isEmpty()){
-            empExprList.forEach(empExpr -> empExpr.setEmpId(emp.getId()));
+            List<EmpExpr> empExprList = emp.getEmpExprList();
+            if(!empExprList.isEmpty()){
+                empExprList.forEach(empExpr -> empExpr.setEmpId(emp.getId()));
 
-            empExprMapper.addEmpExpr(empExprList);
+                empExprMapper.addEmpExpr(empExprList);
+            }
+        } finally {
+            empLogMapper.insertEmpLog(new EmpLog(
+                    null,LocalDateTime.now(), "添加员工：" + emp
+            ));
         }
+
+
     }
 
 
