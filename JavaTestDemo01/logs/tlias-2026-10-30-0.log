@@ -1,0 +1,101 @@
+2026-10-30 10:35:42.825 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 26.0.1 with PID 12516 (E:\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by 陈庆艳 in E:\gitTest\git-text\JavaTestDemo01)
+2026-10-30 10:35:42.831 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-10-30 10:35:45.161 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-10-30 10:35:45.201 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-30 10:35:45.205 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-10-30 10:35:45.206 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-30 10:35:45.290 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 2312 ms
+2026-10-30 10:35:46.494 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+2026-10-30 10:35:46.540 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 8080 (http) with context path '/'
+2026-10-30 10:35:46.550 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 4.615 seconds (process running for 6.202)
+2026-10-30 10:40:03.274 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-30 10:40:03.275 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2026-10-30 10:40:03.277 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 2 ms
+2026-10-30 10:40:03.389 [http-nio-8080-exec-2] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver-Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------211483551922357936513090;charset=UTF-8' is not supported]
+2026-10-30 10:40:17.129 [http-nio-8080-exec-5] INFO  com.webDemo.controller.UploadController-name: 张三, age: 18, file: 屏幕截图 2026-06-17 102115.png
+2026-10-30 10:40:17.139 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: java.io.IOException: java.io.FileNotFoundException: C:\Users\陈庆艳\AppData\Local\Temp\tomcat.8080.8722927079501997993\work\Tomcat\localhost\ROOT\.\upload\屏幕截图 2026-06-17 102115.png (系统找不到指定的路径。)] with root cause
+java.io.FileNotFoundException: C:\Users\陈庆艳\AppData\Local\Temp\tomcat.8080.8722927079501997993\work\Tomcat\localhost\ROOT\.\upload\屏幕截图 2026-06-17 102115.png (系统找不到指定的路径。)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:255)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:210)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:171)
+	at org.apache.tomcat.util.http.fileupload.disk.DiskFileItem.write(DiskFileItem.java:551)
+	at org.apache.catalina.core.ApplicationPart.write(ApplicationPart.java:123)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile.transferTo(StandardMultipartHttpServletRequest.java:266)
+	at com.webDemo.controller.UploadController.upload(UploadController.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+2026-10-30 10:51:42.242 [SpringApplicationShutdownHook] INFO  org.springframework.boot.tomcat.GracefulShutdown-Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-30 10:51:42.272 [tomcat-shutdown] INFO  org.springframework.boot.tomcat.GracefulShutdown-Graceful shutdown complete
+2026-10-30 10:51:47.631 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 26.0.1 with PID 16796 (E:\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by 陈庆艳 in E:\gitTest\git-text\JavaTestDemo01)
+2026-10-30 10:51:47.637 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-10-30 10:51:49.968 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-10-30 10:51:49.996 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-30 10:51:50.005 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-10-30 10:51:50.005 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-30 10:51:50.085 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 2376 ms
+2026-10-30 10:51:51.500 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+2026-10-30 10:51:51.576 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 8080 (http) with context path '/'
+2026-10-30 10:51:51.638 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 4.729 seconds (process running for 5.976)
+2026-10-30 10:51:51.886 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-30 10:51:51.888 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2026-10-30 10:51:51.896 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 8 ms
+2026-10-30 10:51:52.072 [http-nio-8080-exec-1] INFO  com.webDemo.controller.UploadController-name: 张三, age: 18, file: 屏幕截图 2026-06-17 102115.png
+2026-10-30 11:05:07.268 [http-nio-8080-exec-9] INFO  com.webDemo.controller.UploadController-name: 张三, age: 18, file: 屏幕截图 2026-06-17 102115.png
+2026-10-30 11:05:47.741 [SpringApplicationShutdownHook] INFO  org.springframework.boot.tomcat.GracefulShutdown-Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-30 11:05:47.752 [tomcat-shutdown] INFO  org.springframework.boot.tomcat.GracefulShutdown-Graceful shutdown complete
+2026-10-30 11:05:53.682 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 26.0.1 with PID 20068 (E:\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by 陈庆艳 in E:\gitTest\git-text\JavaTestDemo01)
+2026-10-30 11:05:53.686 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-10-30 11:05:55.454 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-10-30 11:05:55.477 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-30 11:05:55.481 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-10-30 11:05:55.481 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-30 11:05:55.565 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 1815 ms
+2026-10-30 11:05:56.816 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+2026-10-30 11:05:56.910 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 8080 (http) with context path '/'
+2026-10-30 11:05:56.917 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 3.945 seconds (process running for 5.673)
+2026-10-30 11:06:05.729 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-30 11:06:05.730 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2026-10-30 11:06:05.732 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 2 ms
+2026-10-30 11:06:05.836 [http-nio-8080-exec-2] INFO  com.webDemo.controller.UploadController-name: 张三, age: 18, file: 屏幕截图 2026-06-17 102115.png
