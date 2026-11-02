@@ -69,6 +69,12 @@ public class EmpServiceImpl implements EmpService {
 
 
     }
+    public Emp getEmpById(Integer id){
+        Emp emp = empMapper.getEmpById(id);
+        List<EmpExpr> empExprList = empExprMapper.getEmpExprList(id);
+        emp.setEmpExprList(empExprList);
+        return emp;
+    }
 
 
 

@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 public interface EmpService {
@@ -15,5 +16,6 @@ public interface EmpService {
 
     void addEmp(Emp emp);
 
+    Emp getEmpById(Integer id);
 }
 

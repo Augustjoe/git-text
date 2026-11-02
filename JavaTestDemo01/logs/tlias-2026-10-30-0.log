@@ -99,3 +99,5 @@ java.io.FileNotFoundException: C:\Users\陈庆艳\AppData\Local\Temp\tomcat.8080
 2026-10-30 11:06:05.730 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
 2026-10-30 11:06:05.732 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 2 ms
 2026-10-30 11:06:05.836 [http-nio-8080-exec-2] INFO  com.webDemo.controller.UploadController-name: 张三, age: 18, file: 屏幕截图 2026-06-17 102115.png
+2026-10-30 16:51:41.246 [SpringApplicationShutdownHook] INFO  org.springframework.boot.tomcat.GracefulShutdown-Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-30 16:51:41.305 [tomcat-shutdown] INFO  org.springframework.boot.tomcat.GracefulShutdown-Graceful shutdown complete

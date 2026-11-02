@@ -30,5 +30,8 @@ public interface EmpMapper {
     void addEmp(Emp emp);
 
 
+    void deleteEmp(List<Integer> ids);
 
+    @Select("select * from emp where id = #{id};")
+    Emp getEmpById(Integer id);
 }
