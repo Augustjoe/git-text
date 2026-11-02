@@ -31,4 +31,28 @@
         </where>
         ORDER BY e.update_time DESC
     </select>
+
+    <update id="updateEmp" parameterType="com.webDemo.pojo.Emp">
+        UPDATE emp
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            phone = #{phone},
+            <if test="job != null">
+                job = #{job},
+            </if>
+            <if test="salary != null">
+                salary = #{salary},
+            </if>
+            entry_date = #{entryDate},
+            image = #{image},
+            dept_id = #{deptId},
+            update_time = #{updateTime},
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

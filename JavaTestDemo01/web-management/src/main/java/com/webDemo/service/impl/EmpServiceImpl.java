@@ -12,8 +12,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -69,11 +71,24 @@ public class EmpServiceImpl implements EmpService {
 
 
     }
+    @Override
     public Emp getEmpById(Integer id){
         Emp emp = empMapper.getEmpById(id);
         List<EmpExpr> empExprList = empExprMapper.getEmpExprList(id);
         emp.setEmpExprList(empExprList);
         return emp;
+    }
+    @Transactional(rollbackFor = {Exception.class})
+    @Override
+    public void updateEmp(Emp emp){
+        emp.setUpdateTime(LocalDateTime.now());
+        empMapper.updateEmp(emp);
+        empExprMapper.deleteEmpExp(Arrays.asList(emp.getId()) );
+        List<EmpExpr> empExprList = emp.getEmpExprList();
+        if(!empExprList.isEmpty()){
+            empExprList.forEach(empExpr -> empExpr.setEmpId(emp.getId()));
+            empExprMapper.addEmpExpr(empExprList);
+        }
     }
 
 
