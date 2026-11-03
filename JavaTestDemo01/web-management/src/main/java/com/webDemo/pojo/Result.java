@@ -30,5 +30,12 @@ public class Result {
         result.msg = "error";
         return result;
     }
+    public static Result error(String msg){
+        Result result = new Result();
+        result.code = 500;
+        result.msg = "error";
+        result.setData(msg);
+        return result;
+    }
 
 }
