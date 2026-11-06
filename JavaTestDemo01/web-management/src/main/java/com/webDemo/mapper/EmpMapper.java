@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface EmpMapper {
@@ -37,4 +38,6 @@ public interface EmpMapper {
 
 
     void updateEmp(Emp emp);
+
+    List<Map<String, Object>> reportEmpInfo();
 }

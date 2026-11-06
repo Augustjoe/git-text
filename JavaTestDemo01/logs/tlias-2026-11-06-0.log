@@ -1,0 +1,50 @@
+2026-11-06 16:12:13.534 [SpringApplicationShutdownHook] INFO  org.springframework.boot.tomcat.GracefulShutdown-Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-06 16:12:13.714 [tomcat-shutdown] INFO  org.springframework.boot.tomcat.GracefulShutdown-Graceful shutdown complete
+2026-11-06 16:12:13.788 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2026-11-06 16:12:13.817 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2026-11-06 16:17:18.211 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 26.0.1 with PID 30196 (E:\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by 陈庆艳 in E:\gitTest\git-text\JavaTestDemo01)
+2026-11-06 16:17:18.216 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-11-06 16:17:20.699 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-11-06 16:17:20.714 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-11-06 16:17:20.717 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-11-06 16:17:20.717 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-06 16:17:20.775 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 2445 ms
+2026-11-06 16:17:21.239 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reportController': Unsatisfied dependency expressed through field 'reportService': No qualifying bean of type 'com.webDemo.service.ReportService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-11-06 16:17:21.242 [main] INFO  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2026-11-06 16:17:21.250 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger-
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-06 16:17:21.267 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field reportService in com.webDemo.controller.ReportController required a bean of type 'com.webDemo.service.ReportService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.webDemo.service.ReportService' in your configuration.
+
+2026-11-06 16:25:58.121 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 26.0.1 with PID 29524 (E:\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by 陈庆艳 in E:\gitTest\git-text\JavaTestDemo01)
+2026-11-06 16:25:58.130 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-11-06 16:26:00.434 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 8080 (http)
+2026-11-06 16:26:00.462 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+2026-11-06 16:26:00.465 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-11-06 16:26:00.466 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-06 16:26:00.547 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 2292 ms
+2026-11-06 16:26:01.644 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+2026-11-06 16:26:01.688 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 8080 (http) with context path '/'
+2026-11-06 16:26:01.926 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 4.585 seconds (process running for 6.179)
+2026-11-06 16:29:11.958 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06 16:29:11.959 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2026-11-06 16:29:11.962 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 3 ms
+2026-11-06 16:29:12.041 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2026-11-06 16:29:12.657 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3548aadb
+2026-11-06 16:29:12.660 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
