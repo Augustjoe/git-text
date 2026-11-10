@@ -39,6 +39,10 @@
         LEFT JOIN emp e ON d.id = e.dept_id
         GROUP BY d.id, d.name;
     </select>
+    <select id="reportEmpGender" resultType="java.util.Map">
+        select if(gender = 1,'男','女') name,count(*) value from emp group by gender;
+
+    </select>
 
     <update id="updateEmp" parameterType="com.webDemo.pojo.Emp">
         UPDATE emp

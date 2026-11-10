@@ -40,4 +40,10 @@ public interface EmpMapper {
     void updateEmp(Emp emp);
 
     List<Map<String, Object>> reportEmpInfo();
+
+
+    List<Map<String, Object>> reportEmpGender();
+
+    @Select("select id,username,name from emp where username = #{username} and password = #{password};")
+    Emp Login(Emp emp);
 }

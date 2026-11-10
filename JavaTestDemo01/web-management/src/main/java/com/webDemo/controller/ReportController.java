@@ -21,4 +21,9 @@ public class ReportController {
         return Result.success(reportService.empReport());
     }
 
+    @RequestMapping("/empGenderReport")
+    public Result empGenderReport() {
+        return Result.success(reportService.empGenderReport());
+    }
+
 }

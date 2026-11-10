@@ -23,4 +23,9 @@ public class ReportServiceImpl implements ReportService {
        return new JobOption(deptNames, emp_counts);
     }
 
+    @Override
+    public List<Map<String, Object>> empGenderReport() {
+        return empMapper.reportEmpGender();
+    }
+
 }
