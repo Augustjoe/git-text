@@ -1,0 +1,23 @@
+2026-11-02 21:32:07.578 [main] INFO  com.webDemo.WebManagementApplication-Starting WebManagementApplication using Java 21.0.12.1 with PID 12648 (D:\工作\gitTest\git-text\JavaTestDemo01\web-management\target\classes started by WCS19 in D:\工作\gitTest\git-text)
+2026-11-02 21:32:07.582 [main] INFO  com.webDemo.WebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-11-02 21:32:08.563 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat initialized with port 18081 (http)
+2026-11-02 21:32:08.577 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-18081"]
+2026-11-02 21:32:08.580 [main] INFO  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2026-11-02 21:32:08.590 [main] INFO  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-02 21:32:08.646 [main] INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer-Root WebApplicationContext: initialization completed in 1025 ms
+2026-11-02 21:32:09.263 [main] INFO  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-18081"]
+2026-11-02 21:32:09.281 [main] INFO  org.springframework.boot.tomcat.TomcatWebServer-Tomcat started on port 18081 (http) with context path '/'
+2026-11-02 21:32:09.285 [main] INFO  com.webDemo.WebManagementApplication-Started WebManagementApplication in 2.084 seconds (process running for 2.546)
+2026-11-02 21:32:15.535 [http-nio-18081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-02 21:32:15.535 [http-nio-18081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2026-11-02 21:32:15.537 [http-nio-18081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet-Completed initialization in 1 ms
+2026-11-02 21:32:27.485 [http-nio-18081-exec-3] INFO  com.webDemo.controller.EmpController-新增员工：Emp(id=null, username=ct1793626347, password=Test123456, name=ct43515, gender=1, phone=13999990001, job=2, salary=9000, image=test.png, entryDate=2024-01-01, deptId=1, createTime=null, updateTime=null, deptName=null, empExprList=[EmpExpr(id=null, empId=null, begin=2020-01-01, end=2021-01-01, company=Original test, job=Developer)])
+2026-11-02 21:32:27.492 [http-nio-18081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2026-11-02 21:32:27.755 [http-nio-18081-exec-3] INFO  com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14f961c3
+2026-11-02 21:32:27.758 [http-nio-18081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2026-11-02 21:32:27.982 [http-nio-18081-exec-5] INFO  com.webDemo.controller.EmpController-查询员工列表，页码：1，每页大小：100
+2026-11-02 21:32:28.078 [http-nio-18081-exec-7] INFO  com.webDemo.controller.EmpController-查询员工信息：28
+2026-11-02 21:32:28.093 [http-nio-18081-exec-9] INFO  com.webDemo.controller.EmpController-修改员工信息：Emp(id=28, username=null, password=null, name=ct43515u, gender=2, phone=13999990002, job=3, salary=12000, image=updated.png, entryDate=2025-01-01, deptId=2, createTime=null, updateTime=null, deptName=null, empExprList=[EmpExpr(id=null, empId=null, begin=2022-02-01, end=2023-02-01, company=Updated test, job=Engineer)])
+2026-11-02 21:32:28.368 [http-nio-18081-exec-1] INFO  com.webDemo.controller.EmpController-查询员工信息：28
+2026-11-02 21:32:28.381 [http-nio-18081-exec-3] INFO  com.webDemo.controller.EmpController-删除员工：[28]
+2026-11-02 21:32:28.451 [http-nio-18081-exec-5] INFO  com.webDemo.controller.EmpController-查询员工列表，页码：1，每页大小：100
