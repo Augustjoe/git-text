@@ -91,6 +91,15 @@ public class EmpServiceImpl implements EmpService {
         }
     }
 
+    @Override
+    public LoginInfo Login(Emp emp) {
+
+        Emp e = empMapper.Login(emp);
+        if(e != null){
+            return new LoginInfo(e.getId(), e.getUsername(), e.getName(),"token");
+        }
+        return null;
+    }
 
 
 }
