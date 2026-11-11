@@ -7,6 +7,7 @@ import com.webDemo.mapper.EmpLogMapper;
 import com.webDemo.mapper.EmpMapper;
 import com.webDemo.pojo.*;
 import com.webDemo.service.EmpService;
+import com.webDemo.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,9 @@ import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class EmpServiceImpl implements EmpService {
@@ -93,10 +96,13 @@ public class EmpServiceImpl implements EmpService {
 
     @Override
     public LoginInfo Login(Emp emp) {
-
         Emp e = empMapper.Login(emp);
+        Map<String, Object> userInfo = new HashMap<>();
+        userInfo.put("id",e.getId());
+        userInfo.put("username",e.getUsername());
+        JwtUtils.generateJwt(userInfo);
         if(e != null){
-            return new LoginInfo(e.getId(), e.getUsername(), e.getName(),"token");
+            return new LoginInfo(e.getId(), e.getUsername(), e.getName(), JwtUtils.generateJwt(userInfo));
         }
         return null;
     }

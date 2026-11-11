@@ -2,7 +2,10 @@ package com.webDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.server.servlet.context.ServletComponentScan;
+import org.springframework.boot.web.servlet.ServletRegistration;
 
+@ServletComponentScan
 @SpringBootApplication
 public class WebManagementApplication {
 
