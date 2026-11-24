@@ -15,11 +15,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -95,4 +91,27 @@ public class EmployeeController {
         PageResult pageResult = employeeService.pageQuery(employeePageQuery);
         return Result.success(pageResult);
     }
+
+    @ApiOperation("修改员工状态")
+    @PostMapping("/status/{status}")
+    public Result startOrStop(@PathVariable Integer status, Long id){
+        employeeService.startOrStop(status, id);
+        return Result.success();
+    }
+
+    @ApiOperation("查询员工信息")
+    @GetMapping("/{id}")
+    public Result<Employee> getById(@PathVariable Long id){
+        Employee emp = employeeService.getById(id);
+        return Result.success(emp);
+    }
+
+    @ApiOperation("修改员工信息")
+    @PutMapping
+    public Result updateEmp(@RequestBody EmployeeDTO empDto){
+        employeeService.updateEmp(empDto);
+        return Result.success();
+    }
+
 }
+
